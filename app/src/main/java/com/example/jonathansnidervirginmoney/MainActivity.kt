@@ -3,6 +3,7 @@ package com.example.jonathansnidervirginmoney
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -37,5 +38,19 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        LogEvents.logEvent(analytics, "MainActivity", "Created")
+    }
+
+    object LogEvents {
+        fun logEvent(analytics: FirebaseAnalytics, id: String, name: String) {
+            analytics.logEvent(
+                FirebaseAnalytics.Event.SELECT_CONTENT, bundleOf(
+                    Pair(FirebaseAnalytics.Param.ITEM_ID, id),
+                    Pair(FirebaseAnalytics.Param.ITEM_NAME, name),
+                    Pair(FirebaseAnalytics.Param.CONTENT_TYPE, "text")
+                )
+            )
+        }
     }
 }

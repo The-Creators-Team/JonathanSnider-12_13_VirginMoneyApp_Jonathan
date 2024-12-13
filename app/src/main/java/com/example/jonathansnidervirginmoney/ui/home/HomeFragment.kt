@@ -32,6 +32,11 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+        //enable to test Crashlytics
+        /*textView.setOnClickListener{
+            throw RuntimeException()
+        }*/
         return root
     }
 
