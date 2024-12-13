@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "73095624883",
+    "project_id": "jonathansnidervirginmoney",
+    "storage_bucket": "jonathansnidervirginmoney.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73095624883:android:c178fa3cf5eaf27d9998c6",
+        "android_client_info": {
+          "package_name": "com.example.jonathansnidervirginmoney"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzw8OX9fE2BFwYRZjokjCKEa2Z9xqKhLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
