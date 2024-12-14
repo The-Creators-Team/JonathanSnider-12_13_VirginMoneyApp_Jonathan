@@ -3,4 +3,12 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="first_name">FirstName</string>
+    <string name="last_name">Last Name</string>
+    <string name="user_email">email</string>
+    <string name="user_title">job title</string>
+    <string name="room_occupied_status">Occupied?</string>
+    <string name="room_occupancy_max">Max Occupency:</string>
+    <string name="room_boolean">True/False</string>
+    <string name="room_occupancy_max_number">Occupency number</string>
 </resources>
