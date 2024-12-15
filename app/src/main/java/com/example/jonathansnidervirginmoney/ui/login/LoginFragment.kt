@@ -60,6 +60,8 @@ class LoginFragment : Fragment() {
         val loginButton = binding.loginButton
         val loadingProgressBar = binding.loading
         val registerButton = binding.registerButton
+        val testButton = binding.testButton
+        val forgotPasswordButton=binding.forgetPasswordButton
         // Initialize Firebase Auth
         auth = Firebase.auth
 
@@ -135,11 +137,19 @@ class LoginFragment : Fragment() {
             findNavController().navigate(
                 R.id.action_navigation_login_to_navigation_register, null,
                 NavOptions.Builder().build())
-            /*createNewFirebaseUser(
-                usernameEditText.text.toString(),
-                passwordEditText.text.toString()
-            )*/
         }
+
+        forgotPasswordButton.setOnClickListener{
+            findNavController().navigate(
+                R.id.action_navigation_login_to_navigation_forgot_password, null,
+                NavOptions.Builder().build())
+        }
+
+        testButton.setOnClickListener{
+            Toast.makeText(context, "${auth.currentUser?.email}", Toast.LENGTH_LONG).show()
+        }
+
+
 
 
     }
@@ -173,25 +183,7 @@ class LoginFragment : Fragment() {
         }
     }
 
-    private fun createNewFirebaseUser(email: String, password: String) {
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Log.d(TAG, "createUserWithEmail:success")
-                    val user = auth.currentUser
-                    Toast.makeText(context, "New Account by ${user?.email}", Toast.LENGTH_LONG)
-                        .show()
 
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(
-                        context, "Authentication failed.", Toast.LENGTH_SHORT,
-                    ).show()
-                }
-            }
-    }
 
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome) + model.displayName

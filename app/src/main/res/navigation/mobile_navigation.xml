@@ -36,10 +36,22 @@
         <action
             android:id="@+id/action_navigation_login_to_navigation_register"
             app:destination="@id/navigation_register" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_forgot_password"
+            app:destination="@id/navigation_forgot_password" />
     </fragment>
     <fragment
         android:id="@+id/navigation_register"
-        android:name="com.example.jonathansnidervirginmoney.RegisterFragment"
+        android:name="com.example.jonathansnidervirginmoney.ui.register.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_navigation_register_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_forgot_password"
+        android:name="com.example.jonathansnidervirginmoney.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" />
 </navigation>
