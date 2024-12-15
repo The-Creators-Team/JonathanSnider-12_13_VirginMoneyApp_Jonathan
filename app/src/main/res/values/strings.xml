@@ -3,12 +3,29 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_login">Login</string>
     <string name="first_name">FirstName</string>
     <string name="last_name">Last Name</string>
     <string name="user_email">email</string>
     <string name="user_title">job title</string>
     <string name="room_occupied_status">Occupied?</string>
-    <string name="room_occupancy_max">Max Occupency:</string>
+    <string name="room_occupancy_max">Max Occupancy:</string>
     <string name="room_boolean">True/False</string>
-    <string name="room_occupancy_max_number">Occupency number</string>
+    <string name="room_occupancy_max_number">Occupancy number</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="action_register">register</string>
+    <string name="action_forget_password">forget password?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="prompt_new_password">New Password</string>
+    <string name="prompt_new_email">New Email</string>
+    <string name="action_create_new_account">create new account</string>
 </resources>

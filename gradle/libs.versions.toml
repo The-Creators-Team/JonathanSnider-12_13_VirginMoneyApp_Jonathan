@@ -24,6 +24,8 @@ googleGmsGoogleServices = "4.4.2"
 firebaseAnalytics = "22.1.2"
 firebaseCrashlytics = "19.3.0"
 googleFirebaseCrashlytics = "3.0.2"
+annotation = "1.9.1"
+firebaseAuth = "23.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -53,6 +55,8 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 retrofit-converter = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofitVersion" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalytics" }
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics", version.ref = "firebaseCrashlytics" }
+androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
