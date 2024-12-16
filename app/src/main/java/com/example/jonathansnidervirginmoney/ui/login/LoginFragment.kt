@@ -265,7 +265,9 @@ class LoginFragment : Fragment() {
 
                 findNavController().navigate(
                     //R.id.action_navigation_login_to_navigation_home, null,
-                    R.id.action_navigation_login_to_navigation_room_recycler_list, null,
+                    //R.id.action_navigation_login_to_navigation_room_recycler_list,
+                    R.id.action_navigation_login_to_navigation_user_recycler_list,
+                    null,
                     NavOptions.Builder().build()
                 )
             } else {

@@ -42,6 +42,9 @@
         <action
             android:id="@+id/action_navigation_login_to_navigation_room_recycler_list"
             app:destination="@id/navigation_room_recycler_list" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_user_recycler_list"
+            app:destination="@id/navigation_user_recycler_list" />
     </fragment>
     <fragment
         android:id="@+id/navigation_register"

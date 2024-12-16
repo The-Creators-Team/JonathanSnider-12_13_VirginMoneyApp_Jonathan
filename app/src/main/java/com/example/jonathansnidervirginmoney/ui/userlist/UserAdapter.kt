@@ -6,21 +6,22 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.jonathansnidervirginmoney.R
+import com.example.jonathansnidervirginmoney.data.model.Users
 import com.example.jonathansnidervirginmoney.databinding.RecyclerViewRowUserBinding
 
 class UserAdapter(
-    val userList: List<String>
+    private val users: Users
 ) : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
     class UserViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val binding = RecyclerViewRowUserBinding.bind(view)
 
         fun setupUI(
-            firstName: String,
-            lastName: String,
-            jobTitle: String,
-            email: String,
-            userImage: String
+            firstName: String?,
+            lastName: String?,
+            jobTitle: String?,
+            email: String?,
+            userImage: String?
         ) {
             binding.userFirstName.text = firstName
             binding.userLastName.text = lastName
@@ -43,9 +44,17 @@ class UserAdapter(
     }
 
     override fun getItemCount(): Int {
-        return userList.size
+        return users.size
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
+        holder.setupUI(
+            users.get(position).firstName,
+            users.get(position).lastName,
+            users.get(position).jobtitle,
+            users.get(position).email,
+            users.get(position).avatar,
+
+        )
     }
 }

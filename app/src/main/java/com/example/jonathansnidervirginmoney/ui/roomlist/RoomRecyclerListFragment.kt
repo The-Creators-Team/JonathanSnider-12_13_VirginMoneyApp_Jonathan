@@ -44,14 +44,6 @@ class RoomRecyclerListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         lifecycleScope.launch {
-
-            /*val roomResult= RetrofitClient.apiInstance.getRooms()
-            val userResult=RetrofitClient.apiInstance.getUsers()
-
-            println("THIS IS THE RESULT FOR THE MAX OCCUPANCY OF THE FIRST ROOM: ${roomResult.get(0).maxOccupancy}")
-            println("THIS IS THE RESULT FOR THE FIRST NAME OF THE FIRST USER: ${userResult.get(0).firstName}")*/
-
-
             roomViewModelInstance.rooms.observe(viewLifecycleOwner) { value ->
                 //THE RESULT MUST BE SENT TO A SEPARATE FUNCTION TO ENSURE THE RESULT FROM THE
                 //ASYNC FUNCTION CALL IS ACTUALLY RECEIVED BEFORE SUPPLYING IT TO THE RECYCLE VIEW
@@ -66,10 +58,7 @@ class RoomRecyclerListFragment : Fragment() {
             roomViewModelInstance.getRooms()
         }
 
-        binding.recyclerViewRooms.apply {
-            layoutManager = GridLayoutManager(context, 2)
-            //adapter=RoomsAdapter()
-        }
+
 
     }
 
