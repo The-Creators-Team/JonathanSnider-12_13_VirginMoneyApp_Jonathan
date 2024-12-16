@@ -3,26 +3,28 @@ package com.example.jonathansnidervirginmoney.ui.roomlist
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.jonathansnidervirginmoney.R
+import com.example.jonathansnidervirginmoney.data.model.Rooms
 import com.example.jonathansnidervirginmoney.databinding.RecyclerViewRowMeetingRoomBinding
 
 class RoomsAdapter(
-    val roomList: List<String>
+    private val rooms: Rooms
 ) : RecyclerView.Adapter<RoomsAdapter.RoomsViewHolder>() {
 
     class RoomsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val binding=RecyclerViewRowMeetingRoomBinding.bind(view)
 
-        fun setupUI(roomStatusIsOccupied: Boolean, roomOccupancyMax: String){
+        fun setupUI(roomID: String, roomStatusIsOccupied: Boolean, roomOccupancyMax: String){
+            binding.roomIdNumber.text=roomID
             if(roomStatusIsOccupied) {
                 binding.roomBoolean.text = "YES"
-                //binding.roomBoolean.setTextColor(ContextCompat.getColor(, R.color.virgin_color))
+                //binding.roomBoolean.setTextColor(ContextCompat.getColor(this, R.color.virgin_color))
             }
             else{
                 binding.roomBoolean.text= "NO"
             }
+
             binding.roomOccupancyMaxNumber.text=roomOccupancyMax
         }
     }
@@ -35,10 +37,14 @@ class RoomsAdapter(
     }
 
     override fun getItemCount(): Int {
-        return roomList.size
+        return rooms.size
     }
 
     override fun onBindViewHolder(holder: RoomsViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.setupUI(
+            rooms.get(position).id!!,
+            rooms.get(position).isOccupied!!,
+            rooms.get(position).maxOccupancy!!.toString()
+            )
     }
 }

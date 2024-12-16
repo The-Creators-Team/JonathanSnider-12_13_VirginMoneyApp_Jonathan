@@ -7,11 +7,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.jonathansnidervirginmoney.databinding.FragmentUserRecyclerListBinding
+import com.example.jonathansnidervirginmoney.viewmodel.RoomViewModel
+import com.example.jonathansnidervirginmoney.viewmodel.UserViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class UserRecyclerListFragment : Fragment() {
 
     private var _binding: FragmentUserRecyclerListBinding? = null
+    private lateinit var userViewModelInstance: UserViewModel
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -33,7 +37,7 @@ class UserRecyclerListFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+        super.onViewCreated(view, savedInstanceState)
         binding.recyclerViewUsers.apply {
             layoutManager= LinearLayoutManager(context)
             //adapter=UserAdapter()

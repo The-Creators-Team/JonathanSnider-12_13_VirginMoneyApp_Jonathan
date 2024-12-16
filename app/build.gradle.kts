@@ -87,7 +87,6 @@ dependencies {
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
-
     //(required specifically for logging in with google)
     implementation(libs.play.services.auth)
 }

@@ -1,11 +1,11 @@
-package com.example.jonathansnidervirginmoney.model
+package com.example.jonathansnidervirginmoney.data.model
 
 
 import com.google.gson.annotations.SerializedName
 
-data class MeetingRoomModel(
-    @SerializedName("createdAt")
-    val createdAt: String? = "",
+data class RoomsItemModel(
+/*    @SerializedName("createdAt")
+    val createdAt: String? = "",*/
     @SerializedName("id")
     val id: String? = "",
     @SerializedName("isOccupied")
