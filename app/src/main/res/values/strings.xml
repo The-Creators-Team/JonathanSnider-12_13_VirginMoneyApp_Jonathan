@@ -30,4 +30,7 @@
     <string name="action_create_new_account">create new account</string>
     <string name="prompt_forgot_email">Enter account email</string>
     <string name="action_send_reset_email">send reset email</string>
+    <string name="action_login_google">login with google</string>
+    <string name="action_login_github">login with github</string>
+    <string name="web_client_id">73095624883-b5j9nid7qjs05esdbm47lno48qjpuetn.apps.googleusercontent.com</string>
 </resources>
