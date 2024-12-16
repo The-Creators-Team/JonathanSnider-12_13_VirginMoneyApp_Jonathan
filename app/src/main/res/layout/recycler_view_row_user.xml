@@ -41,7 +41,9 @@
                 android:layout_marginTop="4dp"
                 android:text="@string/first_name"
                 android:layout_margin="5dp"
-                android:textSize="20sp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="14sp"
+                app:autoSizeMaxTextSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/recycleViewImage"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -52,7 +54,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/last_name"
                 android:layout_margin="5dp"
-                android:textSize="20sp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="14sp"
+                app:autoSizeMaxTextSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/recycleViewImage"
                 app:layout_constraintTop_toBottomOf="@+id/user_first_name" />
@@ -63,7 +67,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/user_title"
                 android:layout_margin="5dp"
-                android:textSize="20sp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="14sp"
+                app:autoSizeMaxTextSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/recycleViewImage"
                 app:layout_constraintTop_toBottomOf="@+id/user_last_name" />
@@ -75,7 +81,9 @@
                 android:text="@string/user_email"
                 android:layout_margin="5dp"
                 android:paddingBottom="5dp"
-                android:textSize="20sp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="14sp"
+                app:autoSizeMaxTextSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/recycleViewImage"
                 app:layout_constraintTop_toBottomOf="@+id/user_title" />
