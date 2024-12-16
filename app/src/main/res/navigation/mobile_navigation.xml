@@ -59,7 +59,11 @@
         android:id="@+id/navigation_forgot_password"
         android:name="com.example.jonathansnidervirginmoney.ui.forgotpassword.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
-        tools:layout="@layout/fragment_forgot_password" />
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_navigation_forgot_password_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_user_recycler_list"
         android:name="com.example.jonathansnidervirginmoney.ui.userlist.UserRecyclerListFragment"

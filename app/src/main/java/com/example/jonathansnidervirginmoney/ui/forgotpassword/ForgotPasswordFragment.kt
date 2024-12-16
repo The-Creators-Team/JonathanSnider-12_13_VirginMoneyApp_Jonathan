@@ -6,7 +6,11 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavOptions
+import androidx.navigation.fragment.findNavController
+import com.example.jonathansnidervirginmoney.R
 import com.example.jonathansnidervirginmoney.databinding.FragmentForgotPasswordBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -52,8 +56,22 @@ class ForgotPasswordFragment : Fragment() {
     }
 
     private fun sendResetEmail(accountEmail: String) {
+        auth.sendPasswordResetEmail(accountEmail).addOnCompleteListener {task->
+            if (task.isSuccessful) {
+                Toast.makeText(context, "Reset Email sent to: $accountEmail", Toast.LENGTH_LONG).show()
 
-        //TODO() database call containing emails to see if this is a registered user
+                findNavController().navigate(
+                    R.id.action_navigation_forgot_password_to_navigation_login,
+                    null,
+                    NavOptions.Builder().build()
+                )
+            }
+            else{
+                Toast.makeText(context, "Failed to send reset email", Toast.LENGTH_LONG)
+                    .show()
+            }
+        }
+
     }
 
 }
