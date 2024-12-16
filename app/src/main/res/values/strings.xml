@@ -37,4 +37,5 @@
     <string name="room_id_number">room id number</string>
     <string name="download_state_text">download state</string>
     <string name="title_rooms">Meeting Rooms</string>
+    <string name="title_users">Users</string>
 </resources>
