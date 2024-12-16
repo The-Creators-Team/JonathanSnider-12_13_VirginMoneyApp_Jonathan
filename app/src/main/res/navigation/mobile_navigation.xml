@@ -54,4 +54,15 @@
         android:name="com.example.jonathansnidervirginmoney.ui.forgotpassword.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/navigation_user_recycler_list"
+        android:name="com.example.jonathansnidervirginmoney.ui.userlist.UserRecyclerListFragment"
+        android:label="fragment_user_recycler_list"
+        tools:layout="@layout/fragment_user_recycler_list" />
+    <fragment
+
+        android:id="@+id/navigation_room_recycler_list"
+        android:name="com.example.jonathansnidervirginmoney.ui.roomlist.RoomRecyclerListFragment"
+        android:label="fragment_room_recycler_list"
+        tools:layout="@layout/fragment_room_recycler_list" />
 </navigation>
