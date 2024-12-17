@@ -43,4 +43,8 @@
     <string name="single_user_last_name">Last Name</string>
     <string name="single_user_email">Email</string>
     <string name="single_user_job_title">Job Title</string>
+    <string name="return_to_user_list">return  to user list</string>
+    <string name="title_user_detail">User Detail</string>
+    <string name="title_room_list">Meeting Rooms</string>
+    <string name="user_list">List of Users</string>
 </resources>

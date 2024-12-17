@@ -25,14 +25,12 @@
     <fragment
         android:id="@+id/navigation_login"
         android:name="com.example.jonathansnidervirginmoney.ui.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_navigation_login_to_navigation_home"
             app:destination="@id/navigation_home"
             app:popUpTo="@id/navigation_login"
-            app:popUpToInclusive="true"
-            />
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_navigation_login_to_navigation_register"
             app:destination="@id/navigation_register" />
@@ -67,7 +65,7 @@
     <fragment
         android:id="@+id/navigation_user_recycler_list"
         android:name="com.example.jonathansnidervirginmoney.ui.userlist.UserRecyclerListFragment"
-        android:label="fragment_user_recycler_list"
+        android:label="@string/user_list"
         tools:layout="@layout/fragment_user_recycler_list" >
         <action
             android:id="@+id/action_navigation_user_recycler_list_to_navigation_user_detail"
@@ -77,11 +75,15 @@
 
         android:id="@+id/navigation_room_recycler_list"
         android:name="com.example.jonathansnidervirginmoney.ui.roomlist.RoomRecyclerListFragment"
-        android:label="fragment_room_recycler_list"
+        android:label="@string/title_room_list"
         tools:layout="@layout/fragment_room_recycler_list" />
     <fragment
         android:id="@+id/navigation_user_detail"
         android:name="com.example.jonathansnidervirginmoney.ui.userlist.UserDetailFragment"
-        android:label="fragment_user_detail"
-        tools:layout="@layout/fragment_user_detail" />
+        android:label="@string/title_user_detail"
+        tools:layout="@layout/fragment_user_detail" >
+        <action
+            android:id="@+id/action_navigation_user_detail_to_navigation_user_recycler_list"
+            app:destination="@id/navigation_user_recycler_list" />
+    </fragment>
 </navigation>

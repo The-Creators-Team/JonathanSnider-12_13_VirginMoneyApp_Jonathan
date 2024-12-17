@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <com.google.android.material.card.MaterialCardView
@@ -34,73 +33,63 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_dashboard_black_24dp" />
 
-            <TextView
-                android:id="@+id/user_first_name"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_marginTop="4dp"
-                android:text="@string/first_name"
-                android:textStyle="bold"
-                app:autoSizeMaxTextSize="24sp"
-                app:autoSizeMinTextSize="14sp"
-                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/more_info_button"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/recycleViewImage"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
 
-            <TextView
-                android:id="@+id/user_last_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="@string/last_name"
-                android:textStyle="bold"
-                app:autoSizeMaxTextSize="24sp"
-                app:autoSizeMinTextSize="14sp"
-                app:autoSizeTextType="uniform"
-                app:layout_constraintStart_toEndOf="@+id/recycleViewImage"
-                app:layout_constraintTop_toBottomOf="@+id/user_first_name" />
+                <TextView
+                    android:id="@+id/user_first_name"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/first_name"
+                    android:textStyle="bold"
 
-            <TextView
-                android:id="@+id/user_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="@string/user_title"
-                android:textStyle="bold"
-                app:autoSizeMaxTextSize="24sp"
-                app:autoSizeMinTextSize="14sp"
-                app:autoSizeTextType="uniform"
-                app:layout_constraintStart_toEndOf="@+id/recycleViewImage"
-                app:layout_constraintTop_toBottomOf="@+id/user_last_name" />
+                    app:autoSizeMinTextSize="15sp"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/user_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:paddingBottom="5dp"
-                android:text="@string/user_email"
-                android:textStyle="bold"
-                app:autoSizeMaxTextSize="24sp"
-                app:autoSizeMinTextSize="14sp"
-                app:autoSizeTextType="uniform"
-                app:layout_constraintStart_toEndOf="@+id/recycleViewImage"
-                app:layout_constraintTop_toBottomOf="@+id/user_title" />
+                <TextView
+                    android:id="@+id/user_last_name"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:text="@string/last_name"
+                    android:textStyle="bold"
+
+                    app:autoSizeMinTextSize="15sp"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/user_first_name" />
+\
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
                 android:id="@+id/more_info_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/action_more_info"
+                android:layout_margin="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.91"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/recycleViewImage"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </com.google.android.material.card.MaterialCardView>
 
 

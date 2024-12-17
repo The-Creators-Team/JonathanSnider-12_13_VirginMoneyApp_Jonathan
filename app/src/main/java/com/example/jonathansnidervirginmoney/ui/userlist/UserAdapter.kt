@@ -30,8 +30,6 @@ class UserAdapter(
         ) {
             binding.userFirstName.text = firstName
             binding.userLastName.text = lastName
-            binding.userTitle.text = jobTitle
-            binding.userEmail.text = email
 
             Glide.with(binding.root.context)
                 .load(userImage)
@@ -39,8 +37,6 @@ class UserAdapter(
                 .error(R.drawable.ic_cancel) //what to display when the image is not successfully retrieved
                 .into(binding.recycleViewImage)
             binding.moreInfoButton.setOnClickListener {
-                println("USER FIRST NAME FROM BUTTON PRESS: $firstName")
-                println("USER LAST NAME FROM BUTTON PRESS: $lastName")
 
                 val bundle = bundleOf(
                     "userId" to id

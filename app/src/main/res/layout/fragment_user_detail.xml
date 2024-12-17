@@ -7,6 +7,7 @@
     tools:context=".ui.userlist.UserDetailFragment">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -40,28 +41,29 @@
 
             <TextView
                 android:id="@+id/single_user_first_name"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="@string/single_user_first_name"
                 android:textStyle="bold"
                 app:autoSizeMaxTextSize="24sp"
-                app:autoSizeMinTextSize="14sp"
+                app:autoSizeMinTextSize="10sp"
                 app:autoSizeTextType="uniform"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/single_user_image"
                 app:layout_constraintVertical_bias="0.0" />
+
             <TextView
                 android:id="@+id/single_user_last_name"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="@string/single_user_last_name"
                 android:textStyle="bold"
                 app:autoSizeMaxTextSize="24sp"
-                app:autoSizeMinTextSize="14sp"
+                app:autoSizeMinTextSize="10sp"
                 app:autoSizeTextType="uniform"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -71,13 +73,13 @@
 
             <TextView
                 android:id="@+id/single_user_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
                 android:layout_margin="10dp"
                 android:text="@string/single_user_email"
                 android:textStyle="bold"
                 app:autoSizeMaxTextSize="24sp"
-                app:autoSizeMinTextSize="14sp"
+                app:autoSizeMinTextSize="10sp"
                 app:autoSizeTextType="uniform"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -87,13 +89,13 @@
 
             <TextView
                 android:id="@+id/single_user_job_title"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="@string/single_user_job_title"
                 android:textStyle="bold"
                 app:autoSizeMaxTextSize="24sp"
-                app:autoSizeMinTextSize="14sp"
+                app:autoSizeMinTextSize="10sp"
                 app:autoSizeTextType="uniform"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -105,4 +107,18 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/return_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/return_to_user_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+        app:layout_constraintVertical_bias="0.0">
+
+    </Button>
 </androidx.constraintlayout.widget.ConstraintLayout>

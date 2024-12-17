@@ -36,7 +36,9 @@ class MainActivity : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_room_recycler_list,
-                R.id.navigation_user_recycler_list
+                R.id.navigation_user_recycler_list,
+                R.id.navigation_login,
+                R.id.navigation_user_detail
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavOptions
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.jonathansnidervirginmoney.R
 import com.example.jonathansnidervirginmoney.databinding.FragmentUserDetailBinding
@@ -33,7 +35,9 @@ class UserDetailFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentUserDetailBinding.inflate(inflater, container, false)
-        //arguments is a special variable a fragment has access to.
+        //arguments is a special variable a fragment has access to. when navigating to a
+        //fragment, pass a Bundle variable and the fragment will be able to access the arguments
+        //in a key value pair
         //Return the arguments supplied when the fragment was instantiated, if any.
         val personId = arguments?.getString("userId")
         singleUserViewModel = ViewModelProvider(this).get(SingleUserViewModel::class.java)
@@ -52,6 +56,12 @@ class UserDetailFragment : Fragment() {
 
         if (personId != null) {
             singleUserViewModel.getUser(personId)
+        }
+
+        binding.returnButton.setOnClickListener{
+            findNavController().navigate(
+                R.id.action_navigation_user_detail_to_navigation_user_recycler_list, null,
+                NavOptions.Builder().build())
         }
         return binding.root
 
