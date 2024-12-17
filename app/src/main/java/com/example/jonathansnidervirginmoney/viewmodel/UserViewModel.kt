@@ -30,7 +30,9 @@ class UserViewModel @Inject constructor(
 
             //adding the Dispatchers.IO argument means this coroutine will run on the IO
             //thread, which most API and database calls should
-            viewModelScope.launch(Dispatchers.IO) {
+            ///doing the above throws error:
+            //Cannot invoke setValue on a background thread (???)
+            viewModelScope.launch() {
                 val result = repositoryImpl.getUsers()
                 if (result.isEmpty()) {
                     _users.postValue(UserResponseState.Fail("Failed to retrieve from the API"))
