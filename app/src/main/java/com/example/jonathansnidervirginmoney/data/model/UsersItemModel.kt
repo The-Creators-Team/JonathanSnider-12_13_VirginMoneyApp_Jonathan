@@ -17,9 +17,9 @@ data class UsersItemModel(
     @SerializedName("firstName")
     val firstName: String? = "",
 /*    @SerializedName("fromName")
-    val fromName: String? = "",
+    val fromName: String? = "",*/
     @SerializedName("id")
-    val id: String? = "",*/
+    val id: String? = "",
     @SerializedName("jobtitle")
     val jobtitle: String? = "",
     @SerializedName("lastName")

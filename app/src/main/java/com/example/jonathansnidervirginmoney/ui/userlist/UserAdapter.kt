@@ -3,6 +3,10 @@ package com.example.jonathansnidervirginmoney.ui.userlist
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
+import androidx.navigation.NavOptions
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.jonathansnidervirginmoney.R
@@ -13,7 +17,7 @@ class UserAdapter(
     private val users: Users
 ) : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
-    class UserViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class UserViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val binding = RecyclerViewRowUserBinding.bind(view)
 
         fun setupUI(
@@ -21,7 +25,8 @@ class UserAdapter(
             lastName: String?,
             jobTitle: String?,
             email: String?,
-            userImage: String?
+            userImage: String?,
+            id: String?
         ) {
             binding.userFirstName.text = firstName
             binding.userLastName.text = lastName
@@ -33,6 +38,20 @@ class UserAdapter(
                 .placeholder(R.drawable.ic_launcher_background) //what to display while image is loading
                 .error(R.drawable.ic_cancel) //what to display when the image is not successfully retrieved
                 .into(binding.recycleViewImage)
+            binding.moreInfoButton.setOnClickListener {
+                println("USER FIRST NAME FROM BUTTON PRESS: $firstName")
+                println("USER LAST NAME FROM BUTTON PRESS: $lastName")
+
+                val bundle = bundleOf(
+                    "userId" to id
+                )
+                val navController = Navigation.findNavController(view)
+                navController.navigate(
+                    R.id.action_navigation_user_recycler_list_to_navigation_user_detail,
+                    bundle
+                )
+
+            }
         }
     }
 
@@ -54,7 +73,7 @@ class UserAdapter(
             users.get(position).jobtitle,
             users.get(position).email,
             users.get(position).avatar,
-
+            users.get(position).id
         )
     }
 }

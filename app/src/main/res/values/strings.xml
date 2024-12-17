@@ -38,4 +38,9 @@
     <string name="download_state_text">download state</string>
     <string name="title_rooms">Meeting Rooms</string>
     <string name="title_users">Users</string>
+    <string name="action_more_info">More Info</string>
+    <string name="single_user_first_name">First Name</string>
+    <string name="single_user_last_name">Last Name</string>
+    <string name="single_user_email">Email</string>
+    <string name="single_user_job_title">Job Title</string>
 </resources>
