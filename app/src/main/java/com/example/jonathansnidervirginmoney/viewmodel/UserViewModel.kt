@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.jonathansnidervirginmoney.data.repository.RepositoryImpl
 import com.example.jonathansnidervirginmoney.data.responsestate.UserResponseState
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.net.SocketTimeoutException
 import javax.inject.Inject
@@ -27,7 +28,9 @@ class UserViewModel @Inject constructor(
         try {
             _users.postValue(UserResponseState.Loading)
 
-            viewModelScope.launch() {
+            //adding the Dispatchers.IO argument means this coroutine will run on the IO
+            //thread, which most API and database calls should
+            viewModelScope.launch(Dispatchers.IO) {
                 val result = repositoryImpl.getUsers()
                 if (result.isEmpty()) {
                     _users.postValue(UserResponseState.Fail("Failed to retrieve from the API"))
